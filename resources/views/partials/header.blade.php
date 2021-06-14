@@ -11,7 +11,7 @@
                 <a class="nav-link @if(Route::current()->getName() == 'home') active @endif" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link @if(Route::current()->getName() == 'comics') active @endif" href="{{route('comics')}}">Comics</a>
+                <a class="nav-link @if(Route::current()->getName() == 'comics.index') active @endif" href="{{route('comics.index')}}">Comics</a>
                 </li>
             </ul>
             </div>

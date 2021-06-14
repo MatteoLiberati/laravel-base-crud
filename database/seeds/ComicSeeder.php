@@ -2,6 +2,7 @@
 
 use App\Comic;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class ComicSeeder extends Seeder
 {
@@ -24,6 +25,7 @@ class ComicSeeder extends Seeder
             $new_comic->sale_date = $comic_db['sale_date'];
             $new_comic->price = $comic_db['price'];
             $new_comic->type = $comic_db['type'];
+            $new_comic->slug = Str::slug($new_comic->name);
 
             $new_comic->save();
         }
