@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Comic;
 use Illuminate\Http\Request;
+
 
 class ComicsController extends Controller
 {
@@ -12,8 +14,9 @@ class ComicsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('pages.comics');
+    {   
+        $db_comics = Comic::all();
+        return view('pages.comics', compact('db_comics'));
     }
 
     /**
