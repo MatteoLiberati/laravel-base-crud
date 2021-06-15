@@ -9,7 +9,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{$comic->name}}</h5>
             </div>
-            <a href="{{route('comics.show', $comic->slug)}}" class="btn btn-primary">Go to details</a>
+            <a href="{{route('comics.show', $comic->slug)}}" class="btn btn-success">Go to details</a>
+            <a href="{{route('comics.edit', $comic->id)}}" class="btn mt-1 btn-primary">Edit</a>
+            <a href="" class="btn mt-1 btn-danger">Delete</a>
         </div>
         @endforeach
     </div>
